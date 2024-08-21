@@ -1,0 +1,28 @@
+{
+  "workers": [
+    {
+      "id": "1",
+      "name": "Hart Hagerty",
+      "country": "United States",
+      "job": "Desktop Support Technician",
+      "email": "цахим шуудан",
+      "proImg": "https://img.daisyui.com/images/profile/demo/2@94.webp"
+    },
+    {
+      "id": "2",
+      "name": "Сарангэрэл",
+      "country": "Монгол",
+      "job": "Техникийн супервайзор",
+      "email": "sarangerel.B@nest.edu.mn",
+      "proImg": "https://img.daisyui.com/images/profile/demo/2@94.webp"
+    },
+    {
+      "id": "3",
+      "name": "Даваасүх",
+      "country": "Герман",
+      "job": "Нягтлан бодогч",
+      "email": "davaasukh@usukhzoosaltangovi.mn",
+      "proImg": "https://img.daisyui.com/images/profile/demo/2@94.webp"
+    }
+  ]
+}
