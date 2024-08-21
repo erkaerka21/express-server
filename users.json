@@ -2,7 +2,8 @@
   "workers": [
     {
       "id": "1",
-      "name": "Hart Hagerty",
+      "firstName": "Hart",
+      "lastName": "Hagerty",
       "country": "United States",
       "job": "Desktop Support Technician",
       "email": "цахим шуудан",
@@ -10,7 +11,8 @@
     },
     {
       "id": "2",
-      "name": "Сарангэрэл",
+      "firstName": "Сарангэрэл",
+      "lastName": "Чулуунцэцэг",
       "country": "Монгол",
       "job": "Техникийн супервайзор",
       "email": "sarangerel.B@nest.edu.mn",
@@ -18,11 +20,20 @@
     },
     {
       "id": "3",
-      "name": "Даваасүх",
+      "firstName": "Даваасүх",
+      "lastName": "Айзам",
       "country": "Герман",
       "job": "Нягтлан бодогч",
       "email": "davaasukh@usukhzoosaltangovi.mn",
       "proImg": "https://img.daisyui.com/images/profile/demo/2@94.webp"
+    },
+    {
+      "id": "4",
+      "firstName": "Туяа",
+      "lastName": "Алтанхүү",
+      "country": "China",
+      "job": "Accountant",
+      "email": "altankhuu@ot.mn"
     }
   ]
 }

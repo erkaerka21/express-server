@@ -17,14 +17,17 @@ app.get("/users", (req, res) => {
 app.post("/users", (req, res) => {
   console.log("body", req.body);
   const data = fs.readFileSync("./users.json", { encoding: "utf8" });
-  const { users } = JSON.parse(data);
+  const { workers: users } = JSON.parse(data);
   const newUser = {
     id: `${users.length + 1}`,
-    name: req.body.name,
-    age: req.body.age,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    country: req.body.country,
+    job: req.body.job,
+    email: req.body.email,
   };
   users.push(newUser);
-  fs.writeFileSync("./users.json", JSON.stringify({ users })); //file dotor nemj oruulna
+  fs.writeFileSync("./users.json", JSON.stringify({ workers: users })); //file dotor nemj oruulna
   res.status(201).json({ users: newUser });
 });
 app.put("/users/:id", (req, res) => {
