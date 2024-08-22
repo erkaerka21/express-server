@@ -20,11 +20,12 @@ app.post("/users", (req, res) => {
   const { workers: users } = JSON.parse(data);
   const newUser = {
     id: `${users.length + 1}`,
-    firstName: req.body.firstName,
+    /* firstName: req.body.firstName,
     lastName: req.body.lastName,
     country: req.body.country,
     job: req.body.job,
-    email: req.body.email,
+    email: req.body.email, */ //eniig
+    ...req.body, //deed taliin eniig spread bolgoj uurchilsun
   };
   users.push(newUser);
   fs.writeFileSync("./users.json", JSON.stringify({ workers: users })); //file dotor nemj oruulna
