@@ -32,16 +32,19 @@ app.post("/users", (req, res) => {
 });
 app.put("/users/:id", (req, res) => {
   const data = fs.readFileSync("./users.json", { encoding: "utf8" });
-  const { users } = JSON.parse(data);
-  console.log(req.params);
-  console.log(req.body);
-  console.log("USERS:", users);
+  const { workers: users } = JSON.parse(data);
+  // console.log(req.params);
+  // console.log(req.body);
+  // console.log("USERS:", users);
   // console.log(data);
   const findUser = users.findIndex((user) => user.id === req.params.id); //parse Int deer aldsan baisanstring bolgoson baisaniig parseInt ni string utgatai bolgono. uund anhaarah
   if (findUser > -1) {
-    users[findUser].name = req.body.name;
-    users[findUser].age = req.body.age;
-    fs.writeFileSync("./users.json", JSON.stringify({ users }));
+    users[findUser].firstName = req.body.firstName;
+    users[findUser].lastName = req.body.lastName;
+    users[findUser].country = req.body.country;
+    users[findUser].job = req.body.job;
+    users[findUser].email = req.body.email;
+    fs.writeFileSync("./users.json", JSON.stringify({ workers: users }));
     res.status(200).json({ user: users[findUser] });
 
     // fs.writeFileSync("./users.json", );
@@ -51,15 +54,13 @@ app.put("/users/:id", (req, res) => {
 });
 app.delete("/users/:id", (req, res) => {
   const data = fs.readFileSync("./users.json", { encoding: "utf8" });
-  const { users } = JSON.parse(data);
+  const { workers: users } = JSON.parse(data);
   console.log("USERS:", users);
   // console.log(data);
-  const findUser = users.findIndex(
-    (user) => user.id === parseInt(req.params.id)
-  );
+  const findUser = users.findIndex((user) => user.id === req.params.id);
   if (findUser > -1) {
     const deleteUser = users.splice(findUser, 1);
-    fs.writeFileSync("./users.json", JSON.stringify({ users }));
+    fs.writeFileSync("./users.json", JSON.stringify({ workers: users }));
     res.status(200).json({ user: deleteUser[0] });
   } else {
     res.status(400).json({ message: "not found" });
